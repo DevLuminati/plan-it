@@ -8,8 +8,8 @@ function Landing() {
   return (
     <div id="landing-home" className="relative h-screen">
       {/* Color Backgrounds */}
-      <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-bl from-dark-purp via-dark-purp to-cloudy-grey"></div>
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-br from-dark-grey via-dark-grey to-cloudy-grey"></div>
+      <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-bl from-dark-purp via-dark-purp to-black"></div>
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-br from-dark-grey via-dark-grey to-black"></div>
 
       {/* Centered Images */}
       <div className="absolute inset-0 flex justify-center items-center z-10">
@@ -56,18 +56,18 @@ function Landing() {
       <div className="absolute top-0 right-0 m-4 pr-4 z-20">
         <div className="flex flex-row space-x-10 text-2xl">
           <Link
-            href="#landing-contact"
-            className={selected === "contact" && `scale-110`}
-            onClick={() => setSelected("contact")}
-          >
-            Contact Us
-          </Link>
-          <Link
             href="#landing-signup"
             className={selected === "signup" && `scale-110`}
             onClick={() => setSelected("signup")}
           >
             Sign Up
+          </Link>
+          <Link
+            href="#landing-contact"
+            className={selected === "contact" && `scale-110`}
+            onClick={() => setSelected("contact")}
+          >
+            Contact Us
           </Link>
         </div>
       </div>
