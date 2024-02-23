@@ -1,17 +1,28 @@
 import About from "@/components/landing/About";
-import ContactUs from "@/components/landing/ContactUs";
 import Landing from "@/components/landing/Landing";
 import SignUp from "@/components/landing/SignUp";
+import Footer from "@/components/footer/Footer";
 
 export default function Home() {
-  let authorized = false;
+  let authorized = true;
 
   return (
     <main>
-      <Landing />
-      <About />
-      <SignUp />
-      <ContactUs />
+      {authorized ? (
+        <>
+          <Landing />
+          <About />
+          <SignUp />
+          <Footer />
+        </>
+      ) : (
+        <>
+          <Landing />
+          <About />
+          <SignUp />
+          <Footer />
+        </>
+      )}
     </main>
   );
 }
