@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-function Landing() {
+function Header() {
   const [selected, setSelected] = useState("home");
 
   return (
@@ -56,18 +56,18 @@ function Landing() {
       <div className="absolute top-0 right-0 m-4 pr-4 z-20">
         <div className="flex flex-row space-x-10 text-2xl">
           <Link
-            href="#landing-signup"
-            className={selected === "signup" && `scale-110`}
-            onClick={() => setSelected("signup")}
+            href="/login"
+            className={selected === "signin" && `scale-110`}
+            onClick={() => setSelected("signin")}
           >
-            Sign Up
+            Sign In
           </Link>
           <Link
-            href="#landing-contact"
+            href="#footer"
             className={selected === "contact" && `scale-110`}
             onClick={() => setSelected("contact")}
           >
-            Contact Us
+            Contact With Us
           </Link>
         </div>
       </div>
@@ -75,4 +75,4 @@ function Landing() {
   );
 }
 
-export default Landing;
+export default Header;

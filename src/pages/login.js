@@ -1,25 +1,17 @@
 import React from "react";
 
-function SignUp() {
+function login() {
   return (
-    <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-50">
-        <body class="h-full">
-        ```
-      */}
-      <div className="bg-gradient-to-t from-dark-grey via-black to-dark-purp flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="relative h-screen bg-gradient-to-bl from-dark-purp via-dark-purp to-black">
+      <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <img
-            className="mx-auto h-24 w-auto"
-            src="/assets/longlogo.png"
+            className="mx-auto h-60 -mt-12 w-auto"
+            src="/assets/largelogo.png"
             alt="PlanIt Fitness"
           />
-          <h2 className="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-cloudy-white">
-            Register for a new account
+          <h2 className="-mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-cloudy-white">
+            Sign in to your account
           </h2>
         </div>
 
@@ -59,7 +51,7 @@ function SignUp() {
                     type="password"
                     autoComplete="current-password"
                     required
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -70,7 +62,7 @@ function SignUp() {
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
-                    className="h-4 w-4 rounded border-gray-300 text-dark-purp focus:ring-dark-purp"
+                    className="h-4 w-4 rounded border-gray-300 text-dark-purp focus:ring-purple-600"
                   />
                   <label
                     htmlFor="remember-me"
@@ -82,10 +74,10 @@ function SignUp() {
 
                 <div className="text-sm leading-6">
                   <a
-                    href="/login"
+                    href="#"
                     className="font-semibold text-dark-purp hover:text-purple-600"
                   >
-                    Already have an account?
+                    Forgot password?
                   </a>
                 </div>
               </div>
@@ -95,15 +87,24 @@ function SignUp() {
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-dark-purp px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-purple-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Register
+                  Sign in
                 </button>
               </div>
             </form>
           </div>
+
+          <p className="mt-10 text-center text-sm text-gray-500">
+            <a
+              href="/"
+              className="font-semibold leading-6 text-cloudy-white hover:text-purple-600"
+            >
+              Return to home
+            </a>
+          </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-export default SignUp;
+export default login;
